@@ -11,6 +11,11 @@
 		0C34476B296A1684002278F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C34476A296A1684002278F6 /* ContentView.swift */; };
 		0C34476D296A1685002278F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C34476C296A1685002278F6 /* Assets.xcassets */; };
 		0C344770296A1685002278F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C34476F296A1685002278F6 /* Preview Assets.xcassets */; };
+		0C34477A296A251B002278F6 /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C344779296A251B002278F6 /* RobotoMono-Medium.ttf */; };
+		0C34477C296A2539002278F6 /* RobotoMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C34477B296A2539002278F6 /* RobotoMono-Light.ttf */; };
+		0CA9A4E9297062860050AC0D /* StaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A4E8297062860050AC0D /* StaggeredGrid.swift */; };
+		0CA9A4EB297069DF0050AC0D /* GridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A4EA297069DF0050AC0D /* GridModel.swift */; };
+		0CA9A4ED29706A630050AC0D /* sample_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A4EC29706A630050AC0D /* sample_app.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		0C34476A296A1684002278F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C34476C296A1685002278F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C34476F296A1685002278F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C344779296A251B002278F6 /* RobotoMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Medium.ttf"; sourceTree = "<group>"; };
+		0C34477B296A2539002278F6 /* RobotoMono-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Light.ttf"; sourceTree = "<group>"; };
+		0C34477D296A27E9002278F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0CA9A4E8297062860050AC0D /* StaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGrid.swift; sourceTree = "<group>"; };
+		0CA9A4EA297069DF0050AC0D /* GridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModel.swift; sourceTree = "<group>"; };
+		0CA9A4EC29706A630050AC0D /* sample_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_app.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +62,15 @@
 		0C344767296A1684002278F6 /* Notia */ = {
 			isa = PBXGroup;
 			children = (
+				0C34477D296A27E9002278F6 /* Info.plist */,
+				0C344776296A2480002278F6 /* Fonts */,
 				0C344768296A1684002278F6 /* NotiaApp.swift */,
 				0C34476A296A1684002278F6 /* ContentView.swift */,
 				0C34476C296A1685002278F6 /* Assets.xcassets */,
 				0C34476E296A1685002278F6 /* Preview Content */,
+				0CA9A4E8297062860050AC0D /* StaggeredGrid.swift */,
+				0CA9A4EA297069DF0050AC0D /* GridModel.swift */,
+				0CA9A4EC29706A630050AC0D /* sample_app.swift */,
 			);
 			path = Notia;
 			sourceTree = "<group>";
@@ -65,6 +81,15 @@
 				0C34476F296A1685002278F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0C344776296A2480002278F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0C34477B296A2539002278F6 /* RobotoMono-Light.ttf */,
+				0C344779296A251B002278F6 /* RobotoMono-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C344770296A1685002278F6 /* Preview Assets.xcassets in Resources */,
+				0C34477A296A251B002278F6 /* RobotoMono-Medium.ttf in Resources */,
 				0C34476D296A1685002278F6 /* Assets.xcassets in Resources */,
+				0C34477C296A2539002278F6 /* RobotoMono-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C34476B296A1684002278F6 /* ContentView.swift in Sources */,
+				0CA9A4ED29706A630050AC0D /* sample_app.swift in Sources */,
+				0CA9A4EB297069DF0050AC0D /* GridModel.swift in Sources */,
+				0CA9A4E9297062860050AC0D /* StaggeredGrid.swift in Sources */,
 				0C344769296A1684002278F6 /* NotiaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +300,7 @@
 				DEVELOPMENT_TEAM = ABK2TMF98V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +330,7 @@
 				DEVELOPMENT_TEAM = ABK2TMF98V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
