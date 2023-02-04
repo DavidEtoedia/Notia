@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1710A729884FE5001ECF38 /* view1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710A629884FE5001ECF38 /* view1.swift */; };
+		0C1710A929885012001ECF38 /* view2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710A829885012001ECF38 /* view2.swift */; };
+		0C1710AB29885026001ECF38 /* view3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710AA29885026001ECF38 /* view3.swift */; };
+		0C1710AD29885042001ECF38 /* view_sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710AC29885042001ECF38 /* view_sample.swift */; };
 		0C344769296A1684002278F6 /* NotiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C344768296A1684002278F6 /* NotiaApp.swift */; };
 		0C34476B296A1684002278F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C34476A296A1684002278F6 /* ContentView.swift */; };
 		0C34476D296A1685002278F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C34476C296A1685002278F6 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1710A629884FE5001ECF38 /* view1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view1.swift; sourceTree = "<group>"; };
+		0C1710A829885012001ECF38 /* view2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view2.swift; sourceTree = "<group>"; };
+		0C1710AA29885026001ECF38 /* view3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view3.swift; sourceTree = "<group>"; };
+		0C1710AC29885042001ECF38 /* view_sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view_sample.swift; sourceTree = "<group>"; };
 		0C344765296A1684002278F6 /* Notia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C344768296A1684002278F6 /* NotiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiaApp.swift; sourceTree = "<group>"; };
 		0C34476A296A1684002278F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1710A529884FD0001ECF38 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0C1710A829885012001ECF38 /* view2.swift */,
+				0C1710A629884FE5001ECF38 /* view1.swift */,
+				0C1710AA29885026001ECF38 /* view3.swift */,
+				0C1710AC29885042001ECF38 /* view_sample.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		0C34475C296A1684002278F6 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +90,7 @@
 				0CA9A4E8297062860050AC0D /* StaggeredGrid.swift */,
 				0CA9A4EA297069DF0050AC0D /* GridModel.swift */,
 				0CA9A4EC29706A630050AC0D /* sample_app.swift */,
+				0C1710A529884FD0001ECF38 /* views */,
 			);
 			path = Notia;
 			sourceTree = "<group>";
@@ -165,7 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C34476B296A1684002278F6 /* ContentView.swift in Sources */,
+				0C1710AD29885042001ECF38 /* view_sample.swift in Sources */,
 				0CA9A4ED29706A630050AC0D /* sample_app.swift in Sources */,
+				0C1710A929885012001ECF38 /* view2.swift in Sources */,
+				0C1710A729884FE5001ECF38 /* view1.swift in Sources */,
+				0C1710AB29885026001ECF38 /* view3.swift in Sources */,
 				0CA9A4EB297069DF0050AC0D /* GridModel.swift in Sources */,
 				0CA9A4E9297062860050AC0D /* StaggeredGrid.swift in Sources */,
 				0C344769296A1684002278F6 /* NotiaApp.swift in Sources */,

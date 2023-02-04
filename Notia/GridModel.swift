@@ -19,11 +19,11 @@ struct GridModel: Identifiable, Hashable {
 var ImageList : [GridModel] = [
 
     GridModel(text: "Sprint Planning for the week", subtext: "created 5mins ago",image: "img1", height: 200),
-    GridModel(text: "Note2 !", subtext: "created 5mins ago", image: "img2", height: 250),
-    GridModel(text: "Note3 !", subtext: "created 5mins ago", image: "img3", height: 280),
-    GridModel(text: "Note4 !",subtext: "created 5mins ago", image: "img4", height: 230),
-    GridModel(text: "Note5 !", subtext: "created 5mins ago", image: "img5", height: 260),
-    GridModel(text: "Note6 !", subtext: "created 5mins ago", image: "img5", height: 220),
+    GridModel(text: "Sprint Planning for the month", subtext: "created 5mins ago", image: "img2", height: 250),
+    GridModel(text: "Sprint Planning for the year", subtext: "created 5mins ago", image: "img3", height: 280),
+    GridModel(text: "Sprint Planning for 3 months",subtext: "created 5mins ago", image: "img4", height: 230),
+    GridModel(text: "Sprint Planning for 11 days", subtext: "created 5mins ago", image: "img5", height: 260),
+    GridModel(text: "Sprint Planning for 2 weeks", subtext: "created 5mins ago", image: "img5", height: 220),
 
 
 ]
