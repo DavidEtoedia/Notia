@@ -25,5 +25,18 @@ var ImageList : [GridModel] = [
     GridModel(text: "Sprint Planning for 11 days", subtext: "created 5mins ago", image: "img5", height: 260),
     GridModel(text: "Sprint Planning for 2 weeks", subtext: "created 5mins ago", image: "img5", height: 220),
 
+]
+
+struct SelectCardModel: Identifiable, Hashable {
+    var id = UUID().uuidString
+    var text : String
+}
+
+var selectCard : [SelectCardModel] = [
+
+    SelectCardModel(text: "Create new note"),
+    SelectCardModel(text: "Create new event"),
+    SelectCardModel(text: "Create new list"),
+   
 
 ]

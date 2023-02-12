@@ -53,6 +53,7 @@ struct StaggeredGrid <Content: View,T: Identifiable>: View where T: Hashable {
                         ForEach(columnData) { object in
                           content(object)
                             
+                            
                         }
                     }
                 }
