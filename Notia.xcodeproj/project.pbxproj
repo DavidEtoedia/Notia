@@ -11,6 +11,9 @@
 		0C1710A929885012001ECF38 /* view2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710A829885012001ECF38 /* view2.swift */; };
 		0C1710AB29885026001ECF38 /* view3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710AA29885026001ECF38 /* view3.swift */; };
 		0C1710AD29885042001ECF38 /* view_sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1710AC29885042001ECF38 /* view_sample.swift */; };
+		0C25123F29994460001097F8 /* create_feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25123E29994460001097F8 /* create_feature.swift */; };
+		0C29A71F2997CA68001D374F /* floating_button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29A71E2997CA68001D374F /* floating_button.swift */; };
+		0C29A7212997D726001D374F /* floating_sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29A7202997D726001D374F /* floating_sheet.swift */; };
 		0C344769296A1684002278F6 /* NotiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C344768296A1684002278F6 /* NotiaApp.swift */; };
 		0C34476B296A1684002278F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C34476A296A1684002278F6 /* ContentView.swift */; };
 		0C34476D296A1685002278F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C34476C296A1685002278F6 /* Assets.xcassets */; };
@@ -20,6 +23,8 @@
 		0CA9A4E9297062860050AC0D /* StaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A4E8297062860050AC0D /* StaggeredGrid.swift */; };
 		0CA9A4EB297069DF0050AC0D /* GridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A4EA297069DF0050AC0D /* GridModel.swift */; };
 		0CA9A4ED29706A630050AC0D /* sample_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A4EC29706A630050AC0D /* sample_app.swift */; };
+		0CCBCCF029A6F6F7006E943F /* Notia_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCBCCEF29A6F6F7006E943F /* Notia_ViewModel.swift */; };
+		0CF83EC629A2F3C7005BB6F5 /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CF83EC429A2F3C7005BB6F5 /* TodoModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,9 @@
 		0C1710A829885012001ECF38 /* view2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view2.swift; sourceTree = "<group>"; };
 		0C1710AA29885026001ECF38 /* view3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view3.swift; sourceTree = "<group>"; };
 		0C1710AC29885042001ECF38 /* view_sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view_sample.swift; sourceTree = "<group>"; };
+		0C25123E29994460001097F8 /* create_feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = create_feature.swift; sourceTree = "<group>"; };
+		0C29A71E2997CA68001D374F /* floating_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floating_button.swift; sourceTree = "<group>"; };
+		0C29A7202997D726001D374F /* floating_sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floating_sheet.swift; sourceTree = "<group>"; };
 		0C344765296A1684002278F6 /* Notia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C344768296A1684002278F6 /* NotiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiaApp.swift; sourceTree = "<group>"; };
 		0C34476A296A1684002278F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +46,8 @@
 		0CA9A4E8297062860050AC0D /* StaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGrid.swift; sourceTree = "<group>"; };
 		0CA9A4EA297069DF0050AC0D /* GridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModel.swift; sourceTree = "<group>"; };
 		0CA9A4EC29706A630050AC0D /* sample_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_app.swift; sourceTree = "<group>"; };
+		0CCBCCEF29A6F6F7006E943F /* Notia_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notia_ViewModel.swift; sourceTree = "<group>"; };
+		0CF83EC529A2F3C7005BB6F5 /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,16 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		0C29A71D2997CA39001D374F /* Notia_components */ = {
+			isa = PBXGroup;
+			children = (
+				0C29A71E2997CA68001D374F /* floating_button.swift */,
+				0C29A7202997D726001D374F /* floating_sheet.swift */,
+				0C25123E29994460001097F8 /* create_feature.swift */,
+			);
+			path = Notia_components;
+			sourceTree = "<group>";
+		};
 		0C34475C296A1684002278F6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,7 @@
 		0C344767296A1684002278F6 /* Notia */ = {
 			isa = PBXGroup;
 			children = (
+				0C29A71D2997CA39001D374F /* Notia_components */,
 				0C34477D296A27E9002278F6 /* Info.plist */,
 				0C344776296A2480002278F6 /* Fonts */,
 				0C344768296A1684002278F6 /* NotiaApp.swift */,
@@ -91,6 +112,8 @@
 				0CA9A4EA297069DF0050AC0D /* GridModel.swift */,
 				0CA9A4EC29706A630050AC0D /* sample_app.swift */,
 				0C1710A529884FD0001ECF38 /* views */,
+				0CF83EC429A2F3C7005BB6F5 /* TodoModel.xcdatamodeld */,
+				0CCBCCEF29A6F6F7006E943F /* Notia_ViewModel.swift */,
 			);
 			path = Notia;
 			sourceTree = "<group>";
@@ -186,12 +209,17 @@
 			files = (
 				0C34476B296A1684002278F6 /* ContentView.swift in Sources */,
 				0C1710AD29885042001ECF38 /* view_sample.swift in Sources */,
+				0C25123F29994460001097F8 /* create_feature.swift in Sources */,
 				0CA9A4ED29706A630050AC0D /* sample_app.swift in Sources */,
 				0C1710A929885012001ECF38 /* view2.swift in Sources */,
 				0C1710A729884FE5001ECF38 /* view1.swift in Sources */,
+				0CF83EC629A2F3C7005BB6F5 /* TodoModel.xcdatamodeld in Sources */,
 				0C1710AB29885026001ECF38 /* view3.swift in Sources */,
+				0CCBCCF029A6F6F7006E943F /* Notia_ViewModel.swift in Sources */,
 				0CA9A4EB297069DF0050AC0D /* GridModel.swift in Sources */,
 				0CA9A4E9297062860050AC0D /* StaggeredGrid.swift in Sources */,
+				0C29A7212997D726001D374F /* floating_sheet.swift in Sources */,
+				0C29A71F2997CA68001D374F /* floating_button.swift in Sources */,
 				0C344769296A1684002278F6 /* NotiaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +423,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0CF83EC429A2F3C7005BB6F5 /* TodoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0CF83EC529A2F3C7005BB6F5 /* TodoModel.xcdatamodel */,
+			);
+			currentVersion = 0CF83EC529A2F3C7005BB6F5 /* TodoModel.xcdatamodel */;
+			path = TodoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C34475D296A1684002278F6 /* Project object */;
 }
