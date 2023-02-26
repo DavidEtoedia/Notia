@@ -55,7 +55,7 @@ struct StaggeredGrid <Content: View,T: Identifiable>: View where T: Hashable {
                               content(object)
                                 
                             }
-                        
+                      
                         }
                        
                     }

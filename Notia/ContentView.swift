@@ -20,8 +20,7 @@ struct ContentView: View {
     @State private var title: String = ""
     @State private var isLogo: Bool = false
     @State private var isDone: Bool = false
-    @State private var isGrid: Bool = false
-  
+    @State private var isGrid: Bool = false  
     var body: some View {
         
         let dateformat: DateFormatter = {
@@ -30,7 +29,6 @@ struct ContentView: View {
             formatter.timeStyle = .short
                return formatter
            }()
-        
         ZStack {
             Color(.black)
             VStack{
