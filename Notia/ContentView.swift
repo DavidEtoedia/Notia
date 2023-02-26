@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+   @EnvironmentObject var vm: CoreDataViewModel
     @Namespace var nameSpace
     @State private var showSheet: Bool = false
     @State private var showButton: Bool = false
@@ -19,14 +20,15 @@ struct ContentView: View {
     @State private var title: String = ""
     @State private var isLogo: Bool = false
     @State private var isDone: Bool = false
-    @State private var isGrid: Bool = false
-    var column: [GridItem] = [
-        GridItem(.fixed(50), spacing: 150),
-        GridItem(.fixed(50), spacing: 150),
-
-    ]
+    @State private var isGrid: Bool = false  
     var body: some View {
         
+        let dateformat: DateFormatter = {
+               let formatter = DateFormatter()
+               formatter.dateStyle = .medium
+            formatter.timeStyle = .short
+               return formatter
+           }()
         ZStack {
             Color(.black)
             VStack{
@@ -60,50 +62,63 @@ struct ContentView: View {
                         }
                     }
                 if isGrid {
-                    StaggeredGrid(columns: 2, list: ImageList) { item in
-                        Rectangle()
-                            .foregroundColor(.gray.opacity(0.2))
-                            .frame(width: 190, height: item.height)
-                            .cornerRadius(25)
-                            .opacity(isGrid ? 1 : 0)
-                            .overlay {
-                                VStack{
-                                    Spacer()
-                                        .frame(height:20)
-                                    Image(systemName: "doc.text")
-                                    .resizable()
-                                    .frame(width: 30, height: 35)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.horizontal)
-                                 
-                                    Spacer()
-                                        .frame(height:20)
-                                    Text(item.text)
-                                    .font(.custom("RobotoMono-Medium", size: 17))
-                                    .kerning(-2)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.horizontal)
-                                    Spacer()
-                                      
-                                    Text(item.subtext)
-                                    .font(.custom("RobotoMono-Medium", size: 13))
-                                    .foregroundColor(.gray.opacity(0.2))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding(.horizontal)
-                                    .padding(.vertical)
+                    StaggeredGrid(columns: 2, list: vm.todo) { item in
+                       
+                        VStack {
+                              Spacer()
+                                 .frame(height:15)
+                              Image(systemName: "doc.text")
+                               .resizable()
+                               .frame(width: 30, height: 35)
+                               .foregroundColor(.white)
+                               .frame(maxWidth: .infinity, alignment: .leading)
+                               .padding(.horizontal)
+                               .onTapGesture {
+                                   withAnimation (.spring(response: 0.7, dampingFraction: 0.5)){
+                                       vm.deleteTodo(obj: item)
+                                   }
+                                  
+                                  
+                               }
+                                Spacer()
+                                 .frame(height:20)
 
-                                }
-                                .frame(maxWidth: .infinity,  maxHeight: .infinity, alignment: .topLeading)
-                            }
-                        
+                            Text(item.title ?? "None")
+                               .font(.custom("RobotoMono-Medium", size: 20))
+                               .foregroundColor(.white)
+                               .kerning(-2)
+                               .frame(maxWidth: .infinity, alignment: .leading)
+                               .padding(.horizontal)
+                            
+                                 Spacer()
+                                  .frame(height: 10)
+                            
+                            Text(item.message ?? "")
+                               .font(.custom("RobotoMono-Medium", size: 13))
+                               .foregroundColor(.white)
+                               .frame(maxWidth: .infinity, alignment: .leading)
+                               .padding(.horizontal)
+                              
+                            
+                            Spacer()
+                             .frame(height: 50)
+                            Text(dateformat.string(from: item.created ?? Date.now))
+                              .font(.custom("RobotoMono-Medium", size: 10))
+                              .foregroundColor(.gray.opacity(0.6))
+                              .frame(maxWidth: .infinity, alignment: .center)
+                              .padding(.horizontal)
+                              .padding(.vertical)
+                            
+                        }
+                        .background(Color.gray.opacity(0.3))
+                        .cornerRadius(30)
                     }
+                    .padding(.horizontal, 5)
                     .padding(.bottom, 30)
                 }
             }
             .frame(maxHeight: .infinity, alignment: .topLeading)
-            .ignoresSafeArea()
+//            .ignoresSafeArea()
             .onAppear{
                 withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7).delay(0.5)) {
                     isShow = true
@@ -116,8 +131,8 @@ struct ContentView: View {
 
             /// SHOW SHEET
             if showSheet {
-                Floating_Sheet(showSheet: $showSheet, showButton: $showButton, showContent: $showContent, selectedItem: $selectedItem, showEditor: $showEditor,
-                nameSpace: nameSpace)
+                Floating_Sheet(showSheet: $showSheet, showButton: $showButton, showContent: $showContent, selectedItem: $selectedItem, showEditor: $showEditor
+                              )
             }
             /// BUTTONS VIEW
             ///
@@ -125,6 +140,7 @@ struct ContentView: View {
                 FloatingButton(showSheet: $showSheet, showButton: $showButton, showContent: $showContent, nameSpace: nameSpace)
             }
         }
+
         .edgesIgnoringSafeArea(.all)
        
        
@@ -144,6 +160,7 @@ struct ContentView: View {
 
 
 struct ContentView_Previews: PreviewProvider {
+
     static var previews: some View {
         ContentView()
     }

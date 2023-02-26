@@ -23,7 +23,7 @@ struct FloatingButton: View {
             .background(  RoundedRectangle(cornerRadius: 30 , style: .continuous)
                 .fill(.green)
                 .frame(width: 60, height: 60)
-                .matchedGeometryEffect(id: "corner", in: nameSpace)
+                .matchedGeometryEffect(id: "corner1", in: nameSpace)
             )
             .mask({
             RoundedRectangle(cornerRadius: 30 , style: .continuous)

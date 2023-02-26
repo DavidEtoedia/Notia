@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Floating_Sheet: View {
+//    @StateObject var vm = CoreDataViewModel()
+    @EnvironmentObject var vm: CoreDataViewModel
     @Binding var showSheet: Bool
     @Binding var showButton: Bool
     @Binding var showContent: Bool
@@ -17,7 +19,7 @@ struct Floating_Sheet: View {
     @State var title: String = ""
     @State private var screenH: CGFloat =  UIScreen.main.bounds.height
     @State private var screenW: CGFloat =  UIScreen.main.bounds.width
-    var nameSpace: Namespace.ID
+//    var nameSpace: Namespace.ID
     var body: some View {
         ZStack(alignment:.bottom) {
             Color(.gray).opacity(!selectedItem ? 0.6 : 1)
@@ -69,7 +71,6 @@ struct Floating_Sheet: View {
                     .foregroundColor(.black)
                     .cornerRadius(30)
                     .overlay{
-                        
                     VStack{
                       if selectedItem {
                          VStack{
@@ -93,7 +94,25 @@ struct Floating_Sheet: View {
                                                .padding(.vertical, 20)
                                    }
                                         
-                                        Spacer()
+                                  Spacer()
+                             Button {
+                                 
+                                 guard !text.isEmpty else {return}
+                                 guard !title.isEmpty else {return}
+                                 vm.createTodo(title: title, message:text)
+                                 self.selectedItem = false
+                                 self.showSheet = false
+                                 self.showButton = true
+                                 self.showEditor = false
+                                
+                             } label: {
+                                 Text("Save")
+                                     .font(.custom("RobotoMono-Medium", size: 25))
+                                     .foregroundColor(.blue)
+                                     .padding(.horizontal, 20)
+                                     .frame(maxWidth: .infinity,  alignment: .center)
+                             }
+
                                     }
                                     .opacity(showEditor ? 1 : 0)
                                     .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -121,8 +140,8 @@ struct Floating_Sheet_Previews: PreviewProvider {
     @Namespace static var nameSpace
     static var previews: some View {
         Floating_Sheet(showSheet: .constant(true), showButton: .constant(true), showContent: .constant(true),
-                       selectedItem: .constant(true), showEditor: .constant(true),
-        nameSpace: nameSpace
+                       selectedItem: .constant(false), showEditor: .constant(true)
+//        nameSpace: nameSpace
         )
     }
 }

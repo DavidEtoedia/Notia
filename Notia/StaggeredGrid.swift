@@ -28,7 +28,6 @@ struct StaggeredGrid <Content: View,T: Identifiable>: View where T: Hashable {
         var gridArray : [[T]] = Array(repeating: [], count: columns)
         
         var currentItem : Int = 0
-        
         for object in list {
             gridArray[currentItem].append(object)
             
@@ -47,18 +46,23 @@ struct StaggeredGrid <Content: View,T: Identifiable>: View where T: Hashable {
         
         
         ScrollView(.vertical ,showsIndicators: showIndicators) {
-            HStack(alignment: .top){
-                ForEach(setUpList(), id: \.self) { columnData in
-                    LazyVStack( spacing: spacing) {
-                        ForEach(columnData) { object in
-                          content(object)
-                            
-                            
+            VStack {
+                HStack(alignment: .top, spacing: nil){
+                    ForEach(setUpList(), id: \.self) { columnData in
+    
+                        LazyVStack( spacing: spacing) {
+                            ForEach(columnData) { object in
+                              content(object)
+                                
+                            }
+                      
                         }
+                       
                     }
                 }
             }
         }
+      
         
 
     }

@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NotiaApp: App {
+    let coreDataManager = CoreDataViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(coreDataManager)
         }
     }
 }
